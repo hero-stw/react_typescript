@@ -12,12 +12,12 @@ type TableProps = {
 }
 function Table({ rows, headCells }: TableProps) {
     return (
-        <table className='mx-auto bg-red-500'>
+        <table className='mx-auto border-collapse border border-solid border-black'>
             <thead>
-                <tr>
+                <tr className='border border-solid border-black'>
                     {
                         headCells.map((head, index) => (
-                            <th key={index}>{head.label}</th>
+                            <th className='border border-solid border-black px-4' key={index}>{head.label}</th>
                         ))
                     }
                 </tr>
@@ -25,10 +25,10 @@ function Table({ rows, headCells }: TableProps) {
             <tbody>
                 {
                     rows.map((row, index) => (
-                        <tr key={index}>
+                        <tr className='border border-solid border-black' key={index}>
                             {
                                 headCells.map((head, index) => (
-                                    <td key={index}>{row[head.key]}</td>
+                                    <td className='border border-solid border-black px-4' key={index}>{row[head.key]}</td>
                                 ))
                             }
                         </tr>

@@ -47,10 +47,10 @@ function App() {
   const submitHandle = () => {
     console.log(12312312)
     setStudent([...students, {
-      name: "herro",
-      age: 10,
-      address: 'HN',
-      phone: '123123123'
+      name: nameU,
+      age: age,
+      address: address,
+      phone: phone
     }])
   }
   return (
@@ -75,12 +75,13 @@ function App() {
         username='tuannda3' // voi gia tri la string thi co the k can ngoac
         password='123123123'
       /> */}
-      <form action="">
-        <input type="text" placeholder='Enter Name' autoComplete="off" onChange={(e) => setNameU(e.target.value)} />
-        <input type="number" placeholder='Enter Age' onChange={(e) => setAge(parseInt(e.target.value))} />
-        <input type="text" placeholder='Enter address' autoComplete="off" onChange={(e) => setAddress(e.target.value)} />
-        <input type="text" placeholder='Enter phone' onChange={(e) => setPhone(e.target.value)} />
-        <button type='button' onClick={() => submitHandle()}>Add Student</button>
+      <h1 className='mt-[2rem] text-xl font-bold'>Add User</h1>
+      <form action="" className='my-5 flex flex-col max-w-[500px] mx-auto'>
+        <input className='border border-solid border-black px-4 mb-[1rem]' type="text" placeholder='Enter Name' autoComplete="off" onChange={(e) => setNameU(e.target.value)} />
+        <input className='border border-solid border-black px-4 mb-[1rem]' type="number" placeholder='Enter Age' onChange={(e) => setAge(parseInt(e.target.value))} />
+        <input className='border border-solid border-black px-4 mb-[1rem]' type="text" placeholder='Enter address' autoComplete="off" onChange={(e) => setAddress(e.target.value)} />
+        <input className='border border-solid border-black px-4 mb-[1rem] ' type="text" placeholder='Enter phone' onChange={(e) => setPhone(e.target.value)} />
+        <button className='border border-solid border-black px-4 py-3 bg-gray-600 text-white max-w-[150px] rounded' type='button' onClick={() => submitHandle()}>Add Student</button>
       </form>
     </div>
   )
