@@ -13,7 +13,6 @@ const AdminLayout = (props: Props) => {
         </div>
         <div className="col-10">
           <main>
-            Content Main
             <Outlet />
           </main>
         </div>

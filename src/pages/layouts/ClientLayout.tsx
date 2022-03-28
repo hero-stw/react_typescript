@@ -8,7 +8,6 @@ const ClientLayout = (props: Props) => {
     <div>
       <header>Client Header</header>
       <main>
-        Client main content
         <Outlet />
       </main>
       <footer>Footer</footer>
